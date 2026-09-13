@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://alpine-agencies-nine.vercel.app/sitemap.xml
+Sitemap: https://alpineagenciesltd.vercel.app/sitemap.xml
