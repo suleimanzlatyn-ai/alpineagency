@@ -77,4 +77,7 @@ $('form[data-email-form],form[data-mailto-form],form[data-mailto],form[data-enqu
 
 /* Accessible dropdown navigation: works with mouse, touch and keyboard. */
 $$('.navdrop>button').forEach(button=>{button.addEventListener('click',e=>{e.preventDefault();const group=button.closest('.navdrop'),open=group.classList.toggle('open');button.setAttribute('aria-expanded',String(open))});button.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){e.preventDefault();button.closest('.navdrop').classList.add('open');button.setAttribute('aria-expanded','true');const first=$('a',button.nextElementSibling);if(first)first.focus()}})});document.addEventListener('click',e=>{if(!e.target.closest('.navdrop'))$$('.navdrop.open').forEach(group=>{group.classList.remove('open');const b=$('button',group);if(b)b.setAttribute('aria-expanded','false')})});document.addEventListener('keydown',e=>{if(e.key==='Escape')$$('.navdrop.open').forEach(group=>{group.classList.remove('open');const b=$('button',group);if(b){b.setAttribute('aria-expanded','false');b.focus()}})});
+
+/* Homepage service finder routes directly to the selected dedicated page. */
+const finder=$('[data-service-finder]');if(finder)finder.addEventListener('submit',e=>{e.preventDefault();const select=$('select',finder),status=$('[data-finder-result]',finder);if(select&&select.value){if(status)status.textContent='Opening your selected service area…';location.href=select.value}else if(status)status.textContent='Choose a topic first to find the most relevant page.'});
 })();
