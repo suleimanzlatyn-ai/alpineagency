@@ -87,3 +87,50 @@ a:hover,.navlinks a:hover{color:#66d5f4}
 .utility-card:hover,.card:hover{border-color:#1687bd}
 .skip-link{background:#66d5f4}
 @media(prefers-reduced-motion:reduce){.hero:before,.hero-orbit{animation:none!important}}
+
+
+/* RESTORE: original Alpine navy / green / cyan palette + premium layout.
+   Keep page-specific hero photography and readable light content sections. */
+:root{
+ --aa-ink:#122a3b;
+ --aa-muted:#617585;
+ --aa-navy:#071b2a;
+ --aa-panel:#0b2939;
+ --aa-line:#d8e6ed;
+ --aa-lime:#66d5f4;
+ --aa-teal:#3c8b63;
+ --forest:#3c8b63;
+ --deep:#071b2a;
+ --lime:#66d5f4;
+ --paper:#eef8fc;
+ --muted:#617585;
+ --line:#d8e6ed
+}
+body{background:#fff!important;color:#122a3b!important;background-image:none!important}
+body:before{opacity:.06;background-size:70px 70px}
+header,.header,.site-header{background:rgba(255,255,255,.96)!important;border-bottom:1px solid #d8e6ed!important;box-shadow:0 8px 28px rgba(7,27,42,.055)}
+.brand,.brand-name{color:#122a3b!important}
+.links a,.navlinks a,.nav-links a{color:#355163}
+.links a:hover,.navlinks a:hover,.nav-links a:hover{color:#3c8b63!important}
+a:hover{color:#3c8b63}
+.hero,.pagehero,.page-hero{background-color:#071b2a!important;background-image:none!important;color:#fff}
+.hero:before,.pagehero:before,.page-hero:before{
+ /* Do not overwrite each page's own image layer; the old rule hid the hero photos. */
+ background-color:transparent!important;
+ background-image:unset!important;
+}
+.hero:after,.pagehero:after,.page-hero:after{border-color:#66d5f455;box-shadow:0 0 0 48px #66d5f408,0 0 0 100px #3c8b6308}
+h1,h2,h3{color:inherit}
+.sec,.section{color:#122a3b}
+.pale,.section.mist{background:#eef8fc!important;color:#122a3b!important}
+.sec:not(.pale),.section.white{background:#fff;color:#122a3b}
+.dark,.section.dark,footer,.site-footer{background:#071b2a!important;color:#edf6fb!important}
+.card,.service-card,.industry-card,.network-card,.feature,.panel,.step-card,.resource-card{background:#fff;color:#122a3b;border-color:#d8e6ed}
+.card p,.service-card p,.industry-card p,.network-card p,.feature p,.panel p,.step-card p,.resource-card p{color:#617585}
+.num,.eyebrow,.ey,.section-head .eyebrow{color:#3c8b63}
+.hero .ey,.hero .eyebrow,.page-hero .eyebrow,.pagehero .eyebrow{color:#c8e66a}
+.btn,.button,.cta,.primary-btn{background:#3c8b63;color:#fff}
+.btn:hover,.button:hover,.cta:hover,.primary-btn:hover{background:#66d5f4;color:#071b2a}
+input,textarea,select{background:#fff;color:#122a3b;border-color:#c7d8e2}
+footer a,.site-footer a{color:#d4e8ef}
+@media(prefers-reduced-motion:reduce){.logo,.hero:after{animation:none!important}}
