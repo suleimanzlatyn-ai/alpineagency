@@ -227,3 +227,17 @@ body{font-size:15px;background:var(--paper);color:var(--text)}
 @media(max-width:900px){.sector-grid{grid-template-columns:repeat(2,1fr)}.editorial-grid{grid-template-columns:1fr}.editorial-visual{min-height:430px}.faq-layout{grid-template-columns:1fr}.faq-section .section-heading{position:static}.signal-inner{justify-content:flex-start;overflow:hidden}.signal-inner span{font-size:9px}}
 @media(max-width:540px){.hero{min-height:670px}.hero-orbit{width:260px;right:-120px;top:8%;opacity:.55}.signal-inner{gap:12px}.sector-grid{grid-template-columns:1fr}.sector-card{min-height:240px}.editorial-visual{min-height:340px}.editorial-stamp b{font-size:30px}.faq summary{font-size:14px}}
 @media(prefers-reduced-motion:reduce){.sector-card,.editorial-visual img{transition:none}}
+
+/* Polished motion and focus states */
+::selection{background:var(--lime);color:var(--forest)}
+:focus-visible{outline:3px solid #9bc85a;outline-offset:4px}
+.nav-links a{position:relative}
+.nav-links a:after{content:'';position:absolute;left:0;right:100%;bottom:0;height:2px;background:var(--moss);transition:right .25s}
+.nav-links a:hover:after,.nav-links a.active:after{right:0}
+.hero h1,.page-hero h1{text-wrap:balance;text-shadow:0 5px 30px #0002}
+.btn,.nav-cta{overflow:hidden}
+.service-card .card-icon{transition:transform .3s,background .3s}
+.service-card:hover .card-icon{transform:translateY(-3px) rotate(-4deg);background:#dff0b0}
+.progress-track{position:fixed;z-index:100;top:0;left:0;right:0;height:3px;pointer-events:none}
+.progress-track span{display:block;height:100%;width:0;background:var(--lime);box-shadow:0 0 12px #d4ed7366}
+@media(prefers-reduced-motion:reduce){.service-card .card-icon{transition:none}}
