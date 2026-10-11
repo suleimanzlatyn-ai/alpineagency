@@ -469,3 +469,15 @@ header,.header,.site-header{background:rgba(255,255,255,.95)!important;border-bo
 .band,.foot,.site-footer{background:#0c4a6e!important;color:white}
 .reveal{opacity:1!important;visibility:visible!important;transform:none!important}
 @media(prefers-reduced-motion:reduce){.hero:before,.logo,.mark,.reveal{animation:none!important;transition:none!important}}
+
+/* FINAL RESTORE: Alpine's earlier navy / blue-green / lime palette with premium layout retained */
+:root{--ink:#122a3b;--forest:#3c8b63;--deep:#071b2a;--lime:#c8e66a;--paper:#eef8fc;--muted:#617585;--line:#d8e6ed;--shadow:0 24px 70px #071b2a20;--n:#071b2a;--b:#3c8b63;--c:#c8e66a;--p:#eef8fc;--i:#122a3b;--m:#617585;--l:#d8e6ed}
+body{background:#fff;color:#122a3b}.topline{background:#04131f;color:#d8edf5}.site-header,.header{background:#071b2af2;color:white;border-color:#ffffff20}
+.hero,.page-hero{background:#071b2a!important;color:white}.hero:before,.page-hero:before{background-image:linear-gradient(90deg,#061927f5 0%,#061927d9 47%,#06192750 100%),var(--hero-image,var(--page-image,url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=2200&q=85')))!important;background-size:cover!important;background-position:center!important}
+.hero:after,.page-hero:after{background:radial-gradient(ellipse at 78% 40%,#c8e66a30,transparent 31%),linear-gradient(0deg,#071b2a80,transparent 52%)!important}
+.hero h1 em,.hero h1 span,.page-hero h1 em,.eyebrow,.ey,.crumb,.num,.link,.service-num,.feature-number{color:#c8e66a}.hero-copy,.hero p,.page-hero p{color:#d6e5ec}
+.btn,.cta,.button,.primary-btn{background:#3c8b63!important;border-color:#3c8b63!important;color:white!important}.btn:hover,.cta:hover,.button:hover,.primary-btn:hover{background:#c8e66a!important;border-color:#c8e66a!important;color:#10251a!important}.btn.out,.btn-outline,.button-light{background:transparent!important;border-color:#c8e66a!important;color:white!important}
+.section-pale,.sec.pale,.pale,.section.mist{background:#eef8fc!important}.band,.foot,.site-footer,.section-dark{background:linear-gradient(125deg,#071b2a,#0b2a40)!important;color:white}
+.card,.service-card,.industry-card,.resource-card,.info-card{border-color:#d8e6ed!important}.card:hover,.service-card:hover,.industry-card:hover,.resource-card:hover,.info-card:hover{border-color:#3c8b63!important;box-shadow:0 22px 54px #071b2a18!important}
+.reveal,.reveal.visible{opacity:1!important;visibility:visible!important;transform:none!important}
+@media(prefers-reduced-motion:reduce){.hero:before,.logo,.mark,.reveal{animation:none!important;transition:none!important}}
