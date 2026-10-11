@@ -43,3 +43,11 @@ input,textarea,select{max-width:100%}
  .navlinks a,.nav-links a,.links a{padding:12px 14px!important;border-radius:9px!important}
  nav{position:relative}
 }
+
+/* Keep every page link reachable on mobile, including legacy page templates without a menu button */
+@media(max-width:900px){
+ .navlinks,.nav-links,.links{display:flex!important;position:static!important;flex-direction:row!important;flex-wrap:nowrap!important;align-items:center!important;gap:8px!important;width:100%;max-width:100%;overflow-x:auto!important;overflow-y:hidden!important;white-space:nowrap;padding:8px 0!important;margin:0!important;border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;scrollbar-width:thin}
+ .navlinks a,.nav-links a,.links a{flex:0 0 auto;padding:10px 12px!important;font-size:12px!important}
+ .menu,.menu-toggle{display:none!important}
+ nav{flex-wrap:wrap!important;gap:8px!important}
+}
