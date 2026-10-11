@@ -1,6 +1,6 @@
 (()=>{'use strict';
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
-const page=location.pathname.split('/').pop()||'index.html',header=$('.site-header'),nav=$('.nav-links'),menu=$('.menu-toggle');
+const page=location.pathname.split('/').pop()||'index.html',header=$('.header,.site-header'),nav=$('.navlinks,.nav-links'),menu=$('.menu-toggle');
 if(header)header.classList.add('js-ready');
 if(nav){$$('a',nav).forEach(a=>{if((a.getAttribute('href')||'').split('#')[0]===page){a.setAttribute('aria-current','page');a.classList.add('active')}});
  if(menu){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');menu.textContent=open?'×':'☰';document.body.classList.toggle('menu-open',open)});$$('a',nav).forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';document.body.classList.remove('menu-open')}));document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';document.body.classList.remove('menu-open')}})}
