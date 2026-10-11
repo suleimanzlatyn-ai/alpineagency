@@ -90,3 +90,28 @@ const topButton=document.createElement('button');topButton.className='back-top';
 let rafLock=false;const updateScroll=()=>{const max=document.documentElement.scrollHeight-innerHeight;progress.style.width=(max>0?Math.min(100,scrollY/max*100):0)+'%';topButton.classList.toggle('show',scrollY>550);rafLock=false};addEventListener('scroll',()=>{if(!rafLock){requestAnimationFrame(updateScroll);rafLock=true}},{passive:true});updateScroll();topButton.addEventListener('click',()=>scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
 $$('[data-faq-toggle],.faq-trigger').forEach(button=>{const id=button.getAttribute('aria-controls')||button.dataset.target;if(!id)return;const panel=document.getElementById(id);if(!panel)return;button.setAttribute('aria-expanded',String(!panel.hidden));button.addEventListener('click',()=>{const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));panel.hidden=!open;const mark=button.querySelector('[data-faq-sign]');if(mark)mark.textContent=open?'−':'+'})});
 $$('[data-checklist]').forEach(list=>{const inputs=$$('input[type=checkbox]',list),bar=$('[data-check-progress]',list),count=$('[data-check-count]',list);const refresh=()=>{const n=inputs.filter(i=>i.checked).length;if(bar)bar.style.width=(inputs.length?n/inputs.length*100:0)+'%';if(count)count.textContent=n+' of '+inputs.length+' completed'};inputs.forEach(i=>i.addEventListener('change',refresh));refresh()});
+
+
+/* Premium interactions: reading progress, card depth, hero parallax and navigation polish */
+(()=> {
+ const doc=document,win=window;
+ if(!doc.querySelector('.reading-progress')){const bar=doc.createElement('div');bar.className='reading-progress';bar.setAttribute('aria-hidden','true');doc.body.prepend(bar)}
+ const progress=doc.querySelector('.reading-progress');
+ const updateProgress=()=>{const max=doc.documentElement.scrollHeight-win.innerHeight;progress.style.width=(max>0?Math.min(100,win.scrollY/max*100):0)+'%';const top=doc.querySelector('[data-top],.back-top');if(top)top.classList.toggle('show',win.scrollY>450)};
+ win.addEventListener('scroll',updateProgress,{passive:true});updateProgress();
+ const reduce=win.matchMedia&&win.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ if(!reduce&&win.matchMedia('(pointer:fine)').matches){
+  doc.querySelectorAll('.service-card,.visual-card,.alpine-image-tile,.feature-tile').forEach(card=>{
+   card.addEventListener('pointermove',e=>{const r=card.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;card.style.transform='perspective(900px) rotateX('+((.5-y)*3)+'deg) rotateY('+((x-.5)*4)+'deg) translateY(-3px)'});
+   card.addEventListener('pointerleave',()=>{card.style.transform=''});
+  });
+ }
+ doc.querySelectorAll('[data-top],.back-top').forEach(b=>b.addEventListener('click',()=>win.scrollTo({top:0,behavior:reduce?'auto':'smooth'})));
+ doc.querySelectorAll('[data-year]').forEach(el=>el.textContent=String(new Date().getFullYear()));
+ doc.querySelectorAll('[data-count-to]').forEach(el=>{
+  const target=Number(el.dataset.countTo||0);if(!Number.isFinite(target))return;
+  const start=()=>{const t0=performance.now(),duration=1100;const tick=t=>{const p=Math.min(1,(t-t0)/duration);el.textContent=Math.round(target*(1-Math.pow(1-p,3))).toLocaleString();if(p<1)requestAnimationFrame(tick)};requestAnimationFrame(tick)};
+  if('IntersectionObserver'in win){const io=new IntersectionObserver(es=>{if(es.some(e=>e.isIntersecting)){start();io.disconnect()}},{threshold:.5});io.observe(el)}else el.textContent=String(target);
+ });
+ doc.querySelectorAll('.hero').forEach(hero=>{if(reduce)return;hero.addEventListener('pointermove',e=>{if(!win.matchMedia('(pointer:fine)').matches)return;const r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;const orb=hero.querySelector('.hero-orb');if(orb)orb.style.transform='translate3d('+(x*15)+'px,'+(y*12)+'px,0)'})});
+})();
