@@ -15,7 +15,7 @@ nav{gap:18px}
 @keyframes aaLogoOrbit{to{transform:rotate(360deg)}}
 @keyframes aaLogoPulse{0%,100%{opacity:.65;transform:scale(.85)}50%{opacity:1;transform:scale(1.2)}}
 .hero,.pagehero,.page-hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 78% 38%,rgba(22,135,189,.18),transparent 42%),linear-gradient(135deg,rgba(8,38,52,.97),rgba(5,23,36,.96))!important}
-.hero:before,.pagehero:before,.page-hero:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 82% 25%,rgba(200,230,106,.14),transparent 18%),linear-gradient(120deg,transparent 0 55%,rgba(71,223,192,.045) 55% 55.2%,transparent 55.2% 100%);animation:aaHeroGlow 9s ease-in-out infinite alternate}
+.hero:before,.pagehero:before,.page-hero:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;animation:aaHeroGlow 9s ease-in-out infinite alternate}
 .hero:after,.pagehero:after,.page-hero:after{content:"";position:absolute;right:-12vw;top:-28vw;width:56vw;height:56vw;max-width:760px;max-height:760px;border:1px solid rgba(200,230,106,.15);border-radius:50%;z-index:-1;box-shadow:0 0 0 48px rgba(71,223,192,.025),0 0 0 100px rgba(71,223,192,.018);animation:aaHalo 28s linear infinite}
 @keyframes aaHeroGlow{to{opacity:.55;transform:translate3d(0,-8px,0)}}
 @keyframes aaHalo{to{transform:rotate(360deg)}}
@@ -114,11 +114,7 @@ header,.header,.site-header{background:rgba(255,255,255,.96)!important;border-bo
 .links a:hover,.navlinks a:hover,.nav-links a:hover{color:#3c8b63!important}
 a:hover{color:#3c8b63}
 .hero,.pagehero,.page-hero{background-color:#071b2a!important;background-image:none!important;color:#fff}
-.hero:before,.pagehero:before,.page-hero:before{
- /* Do not overwrite each page's own image layer; the old rule hid the hero photos. */
- background-color:transparent!important;
- background-image:unset!important;
-}
+.hero:before,.pagehero:before,.page-hero:before{background-color:transparent!important}
 .hero:after,.pagehero:after,.page-hero:after{border-color:#66d5f455;box-shadow:0 0 0 48px #66d5f408,0 0 0 100px #3c8b6308}
 h1,h2,h3{color:inherit}
 .sec,.section{color:#122a3b}
