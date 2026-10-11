@@ -59,3 +59,29 @@ img{max-width:100%}
 @media(max-width:850px){.hero,.page-hero,.pagehero,.hero-section{min-height:640px}.hero:before,.hero::before,.page-hero:before,.page-hero::before,.pagehero:before,.pagehero::before,.hero-section:before,.hero-section::before{background-image:linear-gradient(90deg,#06190feF,#0b2a1de8 70%,#0b2a1da8),url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=1600&q=85')!important}}
 @media(max-width:600px){.hero,.page-hero,.pagehero,.hero-section{min-height:600px}.service-card,.card{padding:23px!important}.section{padding-top:60px!important;padding-bottom:60px!important}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* Alpine premium experience update — shared cinematic motion and interaction polish */
+:root{--alpine-lime:#d5f078;--alpine-deep:#061a20;--alpine-forest:#164b38}
+::selection{background:var(--alpine-lime);color:var(--alpine-deep)}
+.hero{min-height:min(790px,calc(100svh - 110px));isolation:isolate;overflow:hidden}
+.hero:before{background-image:linear-gradient(90deg,#031613f5 0%,#061b18dc 42%,#061b1850 100%),var(--hero-image);background-size:cover;background-position:center;animation:alpinePremiumReveal 1.35s cubic-bezier(.2,.7,.2,1) both}
+.hero:after{background:radial-gradient(ellipse at 78% 40%,#d5f07835,transparent 31%),linear-gradient(0deg,#04130fc4,transparent 46%)}
+.hero h1,.page-hero h1{max-width:1000px;text-wrap:balance}
+.hero h1 em,.page-hero h1 em{color:var(--alpine-lime)}
+.hero-orbit{border-color:#d5f07848;box-shadow:0 0 0 32px #d5f07808,0 0 0 64px #d5f07805}
+.hero-orbit span{box-shadow:0 0 25px #d5f078b8}
+.page-hero{position:relative;isolation:isolate;overflow:hidden}
+.page-hero:before{background-image:linear-gradient(90deg,#061a20ef 0%,#061a20c8 58%,#061a2070 100%),var(--page-image);background-position:center;background-size:cover;animation:alpinePremiumReveal 1.1s ease-out both}
+.btn,.button,.nav-cta{transition:transform .25s,background .25s,box-shadow .25s}
+.btn:hover,.button:hover,.nav-cta:hover{transform:translateY(-3px);box-shadow:0 12px 28px #0002}
+.service-card,.feature-card,.sector-card{transform-style:preserve-3d;backface-visibility:hidden}
+.service-card:after{content:"";position:absolute;left:0;bottom:0;width:0;height:3px;background:var(--alpine-lime);transition:width .3s}
+.service-card:hover:after{width:100%}
+.split-image{box-shadow:0 26px 70px #071f1a20}
+.banner,.cta-band{background:var(--alpine-lime);color:#12271c;padding:58px 0;position:relative;overflow:hidden}
+.banner-inner,.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.banner h2,.cta-band h2{font:800 clamp(28px,4vw,46px)/1.08 Manrope;max-width:760px;letter-spacing:-.05em;margin:0}
+.banner .btn,.cta-band .btn{background:var(--alpine-deep);color:white}
+@keyframes alpinePremiumReveal{from{transform:scale(1.07);filter:brightness(.65) saturate(.7)}to{transform:scale(1);filter:brightness(1) saturate(.95)}}
+@media(max-width:800px){.banner-inner,.cta-inner{align-items:flex-start;flex-direction:column}}
+@media(prefers-reduced-motion:reduce){.hero:before,.page-hero:before{animation:none!important;transform:none!important}}
