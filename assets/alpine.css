@@ -380,3 +380,40 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 @media(max-width:1080px){.site-header .navlinks{gap:9px}.site-header .navlinks a{font-size:10px}}
 @media(max-width:850px){.site-header .navlinks{display:none}.site-header .menu-toggle{display:block}.site-header .navlinks.open,.site-header .navlinks.is-open{display:flex;position:absolute;left:0;right:0;top:100%;background:#071b18;color:white;padding:18px 24px 25px;flex-direction:column;align-items:stretch;gap:0;border-bottom:1px solid #ffffff22;box-shadow:0 24px 45px #0004}.site-header .navlinks.open a,.site-header .navlinks.is-open a{padding:13px 2px;border-bottom:1px solid #ffffff17;font-size:13px}.site-header .nav{position:relative}.site-header .mobile-panel{display:none!important}}
 @media(max-width:560px){.site-header .nav{min-height:72px}.site-header .brand{font-size:12px}.site-header .brand-mark{width:38px;height:38px}}
+
+/* Alpine blue corporate refresh — cohesive across the home page and internal pages */
+:root{--ink:#102a43;--forest:#123d68;--deep:#071b33;--lime:#8dd5ff;--paper:#f5f9fd;--muted:#60758a;--line:#d8e5f0;--shadow:0 24px 70px #082c4a20}
+body{background:var(--paper);color:var(--ink)}
+.topline{background:#06172b;color:#d5e8f8}.topline a{color:#8dd5ff}
+.header{background:#f7fbffed;border-color:#d8e5f0}
+.brand-copy small{color:#3f79a7}
+.nav-links{color:#183f62}.dropmenu a:hover{background:#e9f4fc}
+.button.dark{background:#123d68;border-color:#123d68}.button:hover{box-shadow:0 12px 25px #2479b640}
+.hero:before{background:linear-gradient(90deg,#06172bf2 0%,#0a2e50df 46%,#07558a70 100%),url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=2400&q=90') center/cover}
+.hero:after{background:radial-gradient(circle at 78% 45%,#8dd5ff26,transparent 32%),linear-gradient(0deg,#06172ba8,transparent 40%)}
+.hero-grid{opacity:.15;background-image:linear-gradient(#b9e5ff1b 1px,transparent 1px),linear-gradient(90deg,#b9e5ff1b 1px,transparent 1px)}
+.hero-orbit{border-color:#8dd5ff45;box-shadow:0 0 0 45px #8dd5ff0b,0 0 0 90px #8dd5ff08}
+.hero-orbit:before,.hero-orbit:after{border-color:#8dd5ff45}
+.orbit-dot{background:#8dd5ff;box-shadow:0 0 25px #8dd5ff}
+.hero h1 em,.hero-inner h1 em{color:#8dd5ff}
+.hero-meta span:before{color:#8dd5ff}
+.section-head .eyebrow,.prose .eyebrow{color:#246b9b}
+.section.dark{background:#092947}.section.dark .section-head .eyebrow{color:#8dd5ff}
+.section.mist{background:#eaf3fa}
+.checks li:before{background:#d9edfb;color:#175b8c}
+.visual-tag{background:#8dd5ff;color:#082b49}
+.service-card{border-color:#d8e5f0}.service-card:hover{border-color:#70b8e6;box-shadow:0 24px 50px #082c4a17}
+.card-image{background:#d5e7f5}.card-index,.resource-icon{color:#286e9d}.card-link,.resource a{color:#174f7a}
+.sector-grid{background:#ffffff20}.sector{background:#0b3153}.sector:hover{background:#124a75}.sector .symbol,.sector a{color:#8dd5ff}
+.step-num{color:#286e9d}.faq-item summary:after{color:#286e9d}
+.feature-band{background:#d8efff}.feature-band:after{color:#123d680b}.feature-band p{color:#315a78}
+.feature-band .button{background:#123d68;border-color:#123d68}
+.alpine-image-library{background:#fff}
+.alpine-image-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.alpine-image-tile{margin:0;min-width:0;overflow:hidden;background:#f1f7fc;border:1px solid #d6e5f1;box-shadow:0 10px 28px #0c3b5d0c}
+.alpine-image-tile img{width:100%;height:230px;object-fit:cover;transition:transform .55s;filter:saturate(.9)}
+.alpine-image-tile:hover img{transform:scale(1.04)}
+.alpine-image-tile figcaption{display:flex;align-items:center;gap:13px;padding:14px 16px;color:#163f60;font:700 12px/1.4 Manrope}
+.alpine-image-tile figcaption span{color:#3989bc;font-size:10px;letter-spacing:.12em}
+@media(max-width:760px){.alpine-image-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.alpine-image-tile img{height:165px}.alpine-image-tile figcaption{font-size:10px;padding:11px;gap:8px}}
+@media(max-width:420px){.alpine-image-grid{grid-template-columns:1fr}.alpine-image-tile img{height:210px}}
