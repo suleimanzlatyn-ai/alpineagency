@@ -107,3 +107,12 @@
 @media(max-width:1000px){.navlinks{gap:10px}.navlinks>a,.navlinks .navdrop>button{font-size:10px}.header .nav-cta{display:none}}
 @media(max-width:800px){.header .navlinks{display:none;position:fixed;top:116px;left:0;right:0;bottom:0;background:#f5f7f1;padding:26px 28px 60px;overflow:auto;align-content:start;grid-template-columns:1fr 1fr;gap:0 22px}.header .navlinks.open{display:grid}.header .navlinks>a,.header .navlinks .navdrop>button{padding:15px 0;border-bottom:1px solid var(--line);font-size:13px}.header .navdrop{grid-column:1/-1}.header .dropmenu{position:static;box-shadow:none;border:0;background:#edf2e9}.header .menu-toggle{display:grid;place-items:center;margin-left:auto;background:transparent;border:1px solid #cbd6ca;color:var(--ink);width:42px;height:42px}.feature-row{grid-template-columns:1fr}.content-grid,.contact-grid{grid-template-columns:1fr}.banner-inner{align-items:flex-start;flex-direction:column}}
 @media(max-width:560px){.header .navlinks{top:100px}.header .nav{min-height:70px}.brand-copy{font-size:13px}.brand-copy small{font-size:7px}.hero-grid{background-size:52px 52px}.content-panel,.side-panel,.contact-form,.contact-info{padding:22px}}
+
+/* Searchable service directory */
+.service-tools{display:grid;grid-template-columns:minmax(0,1fr) 220px;gap:12px;margin:0 0 24px;padding:15px;background:#e8eee5;border:1px solid var(--line)}
+.service-tools label{display:grid;gap:6px;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:#44604d}
+.service-tools input,.service-tools select{width:100%;padding:13px 14px;border:1px solid #cbd8c9;background:#fff;color:var(--ink);font:14px 'DM Sans',sans-serif;outline:none}
+.service-tools input:focus,.service-tools select:focus{border-color:var(--green);box-shadow:0 0 0 3px #2b765318}
+.service-results{font-size:11px;color:#62746a;margin:0 0 14px}
+.service-card[hidden]{display:none!important}
+@media(max-width:600px){.service-tools{grid-template-columns:1fr}}
