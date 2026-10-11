@@ -1,0 +1,34 @@
+/* Alpine Agencies shared visual system — fieldwork, engineering & response */
+:root{--aa-ink:#eaf4ed;--aa-muted:#aabdb5;--aa-navy:#061b2b;--aa-panel:#0b2635;--aa-line:rgba(202,231,199,.17);--aa-lime:#c8e66a;--aa-teal:#47dfc0}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{background:#061b2b;color:var(--aa-ink);background-image:radial-gradient(ellipse at 82% 8%,rgba(71,223,192,.09),transparent 36%),linear-gradient(180deg,#061b2b,#081e2c 55%,#061723)}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.16;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 82%)}
+header,.header,.site-header{background:rgba(5,23,35,.84)!important;border-bottom:1px solid var(--aa-line)!important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
+nav{gap:18px}
+.brand,.brand-name{color:#f4f8f1!important}
+.logo{filter:drop-shadow(0 0 12px rgba(71,223,192,.13));transform-origin:center;animation:aaLogoFloat 5s ease-in-out infinite}
+.logo .draw{stroke-dasharray:150;stroke-dashoffset:150;animation:aaLogoDraw 2s .25s ease forwards}
+.logo .orbit{transform-origin:24px 24px;animation:aaLogoOrbit 18s linear infinite}
+.logo .pulse{transform-origin:center;animation:aaLogoPulse 2.2s ease-in-out infinite}
+@keyframes aaLogoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
+@keyframes aaLogoDraw{to{stroke-dashoffset:0}}
+@keyframes aaLogoOrbit{to{transform:rotate(360deg)}}
+@keyframes aaLogoPulse{0%,100%{opacity:.65;transform:scale(.85)}50%{opacity:1;transform:scale(1.2)}}
+.hero,.pagehero,.page-hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 78% 38%,rgba(71,223,192,.13),transparent 42%),linear-gradient(135deg,rgba(8,38,52,.97),rgba(5,23,36,.96))!important}
+.hero:before,.pagehero:before,.page-hero:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 82% 25%,rgba(200,230,106,.14),transparent 18%),linear-gradient(120deg,transparent 0 55%,rgba(71,223,192,.045) 55% 55.2%,transparent 55.2% 100%);animation:aaHeroGlow 9s ease-in-out infinite alternate}
+.hero:after,.pagehero:after,.page-hero:after{content:"";position:absolute;right:-12vw;top:-28vw;width:56vw;height:56vw;max-width:760px;max-height:760px;border:1px solid rgba(200,230,106,.15);border-radius:50%;z-index:-1;box-shadow:0 0 0 48px rgba(71,223,192,.025),0 0 0 100px rgba(71,223,192,.018);animation:aaHalo 28s linear infinite}
+@keyframes aaHeroGlow{to{opacity:.55;transform:translate3d(0,-8px,0)}}
+@keyframes aaHalo{to{transform:rotate(360deg)}}
+h1,h2,h3{letter-spacing:-.025em}
+p{line-height:1.7}
+a{transition:color .2s ease,border-color .2s ease,background .2s ease,transform .2s ease}
+a:hover{color:var(--aa-lime)}
+button,.btn,.button,.cta,.primary-btn{transition:transform .22s ease,box-shadow .22s ease,background .22s ease}
+button:hover,.btn:hover,.button:hover,.cta:hover,.primary-btn:hover{transform:translateY(-2px)}
+.card,.service-card,.industry-card,.network-card,.feature,.panel,.step-card,.resource-card{transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+.card:hover,.service-card:hover,.industry-card:hover,.network-card:hover,.feature:hover,.panel:hover,.step-card:hover,.resource-card:hover{transform:translateY(-4px);border-color:rgba(200,230,106,.4)!important;box-shadow:0 22px 54px rgba(0,0,0,.16)}
+footer{border-top:1px solid var(--aa-line)!important}
+input,textarea,select{max-width:100%}
+:focus-visible{outline:2px solid var(--aa-teal)!important;outline-offset:3px}
+@media(max-width:760px){.hero:after,.pagehero:after,.page-hero:after{right:-45vw;top:-20vw;width:95vw;height:95vw}.hero,.pagehero,.page-hero{background-position:center}.logo{animation-duration:6s}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
