@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
+
 Sitemap: https://alpine-agencies-nine.vercel.app/sitemap.xml
