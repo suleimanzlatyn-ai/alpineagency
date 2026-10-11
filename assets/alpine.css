@@ -318,3 +318,32 @@ img{max-width:100%}
 /* Interactive service finder and case-study refinements */
 .finder-tools{background:#e9eee5;padding:20px;margin:25px 0 30px;border:1px solid #d6e1d4}.finder-search{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #d5dfd4;padding:0 15px;min-height:52px}.finder-search span{font-size:23px;color:#527b55}.finder-search input{border:0;outline:0;min-width:0;width:100%;background:transparent;padding:13px 0;color:#173a2b}.filter-row{display:flex;flex-wrap:wrap;gap:8px;margin-top:15px}.filter-btn{border:1px solid #cbd8ca;background:#f9fbf7;padding:10px 14px;color:#284834;font-size:10px;font-weight:800;transition:background .2s,color .2s,border-color .2s}.filter-btn:hover,.filter-btn.active{background:#173e31;border-color:#173e31;color:#fff}.finder-grid .service-card[hidden]{display:none!important}.form-note{font-size:11px;color:#66766a;margin-top:16px}.notice{background:#eaf0e6;border-left:3px solid #4d8255;padding:16px 19px;color:#465b4a;font-size:12px;line-height:1.75}.faq-list{border-top:1px solid var(--line)}.faq-item{border-bottom:1px solid var(--line)}.faq-question{display:flex;width:100%;justify-content:space-between;align-items:center;gap:20px;border:0;background:transparent;text-align:left;padding:22px 0;color:var(--ink);font:800 15px Manrope}.faq-question span{font-size:22px;color:var(--leaf);transition:transform .2s}.faq-answer{padding:0 35px 22px 0;color:var(--muted);font-size:13px}.faq-item:not(.open) .faq-answer{display:none}.faq-item.open .faq-question span{transform:rotate(45deg)}
 @media(max-width:600px){.finder-tools{padding:14px}.filter-btn{padding:9px 11px}.finder-search input{font-size:13px}}
+
+
+/* Premium shared components used across all pages */
+.nav-search{width:38px;height:38px;display:inline-grid;place-items:center;background:transparent;border:1px solid #cbd8ca;color:var(--forest,#103c31);font-size:25px;cursor:pointer;transition:background .2s,transform .2s}
+.nav-search:hover{background:#e9f1e5;transform:translateY(-2px)}
+.service-finder{display:grid;grid-template-columns:1.05fr .85fr;gap:34px;align-items:center;background:linear-gradient(125deg,#e8eee3,#f9faf4);border:1px solid #d6e1d2;padding:clamp(22px,4vw,44px);position:relative;overflow:hidden}
+.service-finder:after{content:"";position:absolute;right:-100px;top:-150px;width:300px;height:300px;border:1px solid #71976a35;border-radius:50%;box-shadow:0 0 0 35px #71976a0a,0 0 0 70px #71976a08;pointer-events:none}
+.service-finder h2{font:800 clamp(29px,4.5vw,48px)/1.03 Manrope;letter-spacing:-.055em;margin:13px 0}
+.service-finder p{max-width:600px;color:#64766d;font-size:14px}
+.finder-tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:20px}
+.finder-tags span{padding:7px 10px;background:#fff;border:1px solid #d9e3d6;font-size:10px;font-weight:800;color:#375d46;letter-spacing:.04em}
+.finder-form{position:relative;z-index:1;display:grid;gap:12px;background:#fffefb;padding:22px;border:1px solid #d7e1d5;box-shadow:0 16px 42px #071f1a0d}
+.finder-form label{font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.finder-form select{width:100%;min-height:49px;padding:13px;border:1px solid #cbd8ca;background:white;color:#163a2d;font:600 13px 'DM Sans',sans-serif}
+.finder-form .button{width:100%;border:0;min-height:48px;cursor:pointer}
+.finder-result{min-height:18px;margin:0!important;font-size:11px!important;color:#52775b!important}
+.search-dialog{width:min(740px,calc(100% - 28px));max-height:82vh;padding:0;border:1px solid #c9d9c8;background:#f8faf5;color:#142d24;box-shadow:0 30px 100px #06191465}
+.search-dialog::backdrop{background:#061914b8;backdrop-filter:blur(8px)}
+.search-dialog-inner{padding:clamp(18px,4vw,30px)}
+.search-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:18px}
+.search-dialog h2{font:800 clamp(24px,4vw,34px)/1.1 Manrope;letter-spacing:-.04em;margin:8px 0}
+.search-close{width:40px;height:40px;border:1px solid #d3dfd2;background:transparent;font-size:24px;cursor:pointer}
+.search-input{width:100%;margin:16px 0;padding:15px 16px;border:1px solid #cbd8ca;background:white;color:#132d23;font:600 15px 'DM Sans',sans-serif}
+.search-results{display:grid;gap:7px;max-height:45vh;overflow:auto}
+.search-results a{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:13px 15px;background:#edf2e9;border:1px solid transparent;font-size:12px;font-weight:800}
+.search-results a:hover{background:#e2ebdc;border-color:#bdcfb8}
+.search-results small{display:block;font-size:11px;color:#697a72;font-weight:500;margin-top:3px}
+.search-results .search-empty{padding:18px;color:#697a72;font-size:13px}
+@media(max-width:850px){.service-finder{grid-template-columns:1fr;gap:20px}.nav-search{display:none}}
