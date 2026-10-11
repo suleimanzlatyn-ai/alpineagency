@@ -26,6 +26,7 @@ const pages=[
 ['Infrastructure','infrastructure.html','Infrastructure and asset lifecycle'],
 ['Asset infrastructure','asset-infrastructure.html','Asset infrastructure services'],
 ['Asset maintenance','asset-maintenance.html','Planned maintenance and asset care'],
+['Planned maintenance','planned-maintenance.html','Planned inspections and asset care'],
 ['Engineering maintenance','engineering-maintenance.html','Engineering and maintenance'],
 ['Water and drainage','water-drainage.html','Water systems, drainage and pollution control'],
 ['Drainage and environment','drainage-environment.html','Drainage and environmental concerns'],
