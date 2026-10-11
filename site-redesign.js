@@ -1,11 +1,14 @@
-(()=>{'use strict';
+(()=>{'use strict';if(window.__alpineRedesignLoaded)return;window.__alpineRedesignLoaded=true;window.__alpineRedesignRequested=true;
 const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
 const page=location.pathname.split('/').pop()||'index.html',header=$('.site-header'),nav=$('.nav-links'),menu=$('.menu-toggle');
 if(header)header.classList.add('js-ready');
 if(nav){$$('a',nav).forEach(a=>{if((a.getAttribute('href')||'').split('#')[0]===page){a.setAttribute('aria-current','page');a.classList.add('active')}});
  if(menu){menu.addEventListener('click',()=>{const open=nav.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Close navigation':'Open navigation');menu.textContent=open?'×':'☰';document.body.classList.toggle('menu-open',open)});$$('a',nav).forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';document.body.classList.remove('menu-open')}));document.addEventListener('keydown',e=>{if(e.key==='Escape'){nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰';document.body.classList.remove('menu-open')}})}
 }
-$$('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
+/* Filterable service/resource directories and honest count-up effects. */
+$('[data-count]').forEach(el=>{if(reduced)return;const target=Number(el.dataset.count||0),suffix=el.dataset.suffix||'';let started=false;const run=()=>{if(started)return;started=true;const t0=performance.now();const tick=now=>{const p=Math.min((now-t0)/1000,1);el.textContent=Math.round(target*(1-Math.pow(1-p,3)))+suffix;if(p<1)requestAnimationFrame(tick)};requestAnimationFrame(tick)};if('IntersectionObserver'in window){const counterObserver=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){run();counterObserver.disconnect()}}));counterObserver.observe(el)}else run()});
+$('.filter-btn').forEach(btn=>btn.addEventListener('click',()=>{const group=btn.closest('[data-filter-group]')||document;$('.filter-btn',group).forEach(b=>{b.classList.toggle('active',b===btn);b.setAttribute('aria-pressed',String(b===btn))});const filter=btn.dataset.filter||'all';const cards=$('[data-category]');cards.forEach(card=>{const categories=(card.dataset.category||'').split(/\\s+/);card.hidden=filter!=='all'&&!categories.includes(filter)})}));
+$('[data-year]').forEach(el=>el.textContent=new Date().getFullYear());
 if(header){const scroll=()=>header.classList.toggle('scrolled',window.scrollY>12);scroll();window.addEventListener('scroll',scroll,{passive:true})}
 if('IntersectionObserver'in window){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.1});$$('.reveal').forEach(el=>io.observe(el))}else $$('.reveal').forEach(el=>el.classList.add('visible'));
 const reduced=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
