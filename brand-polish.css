@@ -401,3 +401,25 @@ header,.header,.site-header{background:rgba(255,255,255,.94)!important;border-bo
 .pale,.section.mist{background:#f0f9ff!important}
 footer,.site-footer,.dark,.section.dark{background:#0c4a6e!important;color:#f0f9ff!important}
 @media(prefers-reduced-motion:reduce){.hero:before,.hero:after,.hero-orbit{animation:none!important}}
+
+/* FINAL RESTORATION: Alpine's original white, navy and sky-blue brand palette.
+   Keep each page's own layout and photographs; do not hide reveal content if JS is unavailable. */
+:root{--aa-ink:#33413f;--aa-muted:#6b7d7a;--aa-navy:#0c4a6e;--aa-panel:#f0f9ff;--aa-line:#7dd3fc;--aa-lime:#38bdf8;--aa-teal:#0ea5e9;--forest:#0369a1;--deep:#0c4a6e;--lime:#38bdf8;--paper:#f0f9ff;--muted:#6b7d7a;--line:#7dd3fc}
+body{background:#fff;color:#33413f}
+header,.header,.site-header{background:rgba(255,255,255,.94)!important;border-bottom:1px solid #bae6fd!important}
+.links a,.navlinks a,.nav-links a{color:#33413f}
+.links a:hover,.navlinks a:hover,.nav-links a:hover{color:#0284c7!important}
+.hero,.pagehero,.page-hero{background-color:#0c4a6e;color:#fff}
+.hero:before,.pagehero:before,.page-hero:before{opacity:1!important;visibility:visible!important;background-size:cover!important;background-position:center!important}
+.hero:after,.pagehero:after,.page-hero:after{pointer-events:none}
+.card,.service-card,.industry-card,.resource-card{border-color:#bae6fd}
+.card:hover,.service-card:hover,.industry-card:hover,.resource-card:hover{border-color:#38bdf8!important;box-shadow:0 22px 54px rgba(3,105,161,.13)}
+.ey,.eyebrow,.num,.card-index{color:#0284c7}
+.btn,.cta,.button,.primary-btn{background:#0284c7;color:white}
+.btn:hover,.cta:hover,.button:hover,.primary-btn:hover{background:#38bdf8;color:#0c4a6e}
+.pale,.sec.pale,.section.mist{background:#f0f9ff}
+.band,.foot,.site-footer{background:#0c4a6e;color:#fff}
+.reveal{opacity:1!important;visibility:visible!important;transform:none!important}
+.reveal.visible{opacity:1!important;visibility:visible!important;transform:none!important}
+img{max-width:100%}
+@media(prefers-reduced-motion:reduce){.hero:before,.logo,.mark,.reveal{animation:none!important;transition:none!important}}
