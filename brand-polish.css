@@ -506,3 +506,11 @@ html{scroll-behavior:smooth;scroll-padding-top:100px}
 @keyframes alpineOrbit{to{transform:rotate(360deg)}}@keyframes alpineDraw{to{stroke-dashoffset:0}}@keyframes alpineHeroZoom{from{transform:scale(1.055);filter:saturate(.8)}to{transform:scale(1);filter:saturate(1)}}@keyframes alpineFloat{0%,100%{transform:translateY(0) rotateX(0)}50%{transform:translateY(-12px) rotateX(4deg)}}@keyframes alpineContentIn{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:760px){.hero{min-height:690px!important}.hero-orb{right:-12%!important;top:8%!important;opacity:.6}.hero-grid{background-size:48px 48px!important}.hero-content{max-width:100%;padding-top:100px!important}.header .nav-contact{display:none}}
 @media(prefers-reduced-motion:reduce){.orbit,.mount,.hero:before,.hero-orb,.hero-content{animation:none!important}.card,.btn{transition:none!important}}
+
+/* ALPINE SIGNATURE SYSTEM — forest, mineral, warm paper */
+:root{--ink:#172e27;--forest:#286849;--deep:#081e18;--lime:#c8e66a;--paper:#f5f7f1;--muted:#68776d;--line:#dce4d8;--shadow:0 24px 70px #081e181c}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #c8e66a;outline-offset:3px}
+.site-progress,.scroll-progress{background:linear-gradient(90deg,#2f8057,#c8e66a)!important;box-shadow:0 0 12px #c8e66a66}
+.service-card:hover,.feature-card:hover,.sector-card:hover{border-color:#a9c56c}
+.btn,.button{transition:transform .22s,box-shadow .22s,background .22s}.btn:hover,.button:hover{transform:translateY(-2px);box-shadow:0 12px 28px #081e1825}
+.hero-orb{background:radial-gradient(circle,#c8e66a20,transparent 68%)!important}
