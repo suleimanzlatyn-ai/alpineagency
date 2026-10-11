@@ -1,12 +1,12 @@
 /* Alpine Agencies shared visual system — fieldwork, engineering & response */
-:root{--aa-ink:#eaf4ed;--aa-muted:#aabdb5;--aa-navy:#061b2b;--aa-panel:#0b2635;--aa-line:rgba(202,231,199,.17);--aa-lime:#c8e66a;--aa-teal:#47dfc0}
+:root{--aa-ink:#eaf4ed;--aa-muted:#aabdb5;--aa-navy:#061b2b;--aa-panel:#0b2635;--aa-line:rgba(202,231,199,.17);--aa-lime:#66d5f4;--aa-teal:#1687bd}
 html{scroll-behavior:smooth;scroll-padding-top:92px}
-body{background:#061b2b;color:var(--aa-ink);background-image:radial-gradient(ellipse at 82% 8%,rgba(71,223,192,.09),transparent 36%),linear-gradient(180deg,#061b2b,#081e2c 55%,#061723)}
+body{background:#061b2b;color:var(--aa-ink);background-image:radial-gradient(ellipse at 82% 8%,rgba(22,135,189,.12),transparent 36%),linear-gradient(180deg,#061b2b,#081e2c 55%,#061723)}
 body:before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;opacity:.16;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:54px 54px;mask-image:linear-gradient(to bottom,black,transparent 82%)}
 header,.header,.site-header{background:rgba(5,23,35,.84)!important;border-bottom:1px solid var(--aa-line)!important;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px)}
 nav{gap:18px}
 .brand,.brand-name{color:#f4f8f1!important}
-.logo{filter:drop-shadow(0 0 12px rgba(71,223,192,.13));transform-origin:center;animation:aaLogoFloat 5s ease-in-out infinite}
+.logo{filter:drop-shadow(0 0 12px rgba(22,135,189,.18));transform-origin:center;animation:aaLogoFloat 5s ease-in-out infinite}
 .logo .draw{stroke-dasharray:150;stroke-dashoffset:150;animation:aaLogoDraw 2s .25s ease forwards}
 .logo .orbit{transform-origin:24px 24px;animation:aaLogoOrbit 18s linear infinite}
 .logo .pulse{transform-origin:center;animation:aaLogoPulse 2.2s ease-in-out infinite}
@@ -14,7 +14,7 @@ nav{gap:18px}
 @keyframes aaLogoDraw{to{stroke-dashoffset:0}}
 @keyframes aaLogoOrbit{to{transform:rotate(360deg)}}
 @keyframes aaLogoPulse{0%,100%{opacity:.65;transform:scale(.85)}50%{opacity:1;transform:scale(1.2)}}
-.hero,.pagehero,.page-hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 78% 38%,rgba(71,223,192,.13),transparent 42%),linear-gradient(135deg,rgba(8,38,52,.97),rgba(5,23,36,.96))!important}
+.hero,.pagehero,.page-hero{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 78% 38%,rgba(22,135,189,.18),transparent 42%),linear-gradient(135deg,rgba(8,38,52,.97),rgba(5,23,36,.96))!important}
 .hero:before,.pagehero:before,.page-hero:before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(circle at 82% 25%,rgba(200,230,106,.14),transparent 18%),linear-gradient(120deg,transparent 0 55%,rgba(71,223,192,.045) 55% 55.2%,transparent 55.2% 100%);animation:aaHeroGlow 9s ease-in-out infinite alternate}
 .hero:after,.pagehero:after,.page-hero:after{content:"";position:absolute;right:-12vw;top:-28vw;width:56vw;height:56vw;max-width:760px;max-height:760px;border:1px solid rgba(200,230,106,.15);border-radius:50%;z-index:-1;box-shadow:0 0 0 48px rgba(71,223,192,.025),0 0 0 100px rgba(71,223,192,.018);animation:aaHalo 28s linear infinite}
 @keyframes aaHeroGlow{to{opacity:.55;transform:translate3d(0,-8px,0)}}
@@ -56,11 +56,11 @@ input,textarea,select{max-width:100%}
 @media(max-width:760px){.w{position:relative;flex-wrap:wrap}.links{display:none!important;position:absolute;top:calc(100% + 8px);left:0;right:0;z-index:1000;padding:16px;background:rgba(5,23,35,.97);border:1px solid var(--aa-line);border-radius:12px;flex-direction:column;align-items:flex-start;gap:14px;box-shadow:0 18px 42px rgba(0,0,0,.3)}.links.is-open{display:flex!important}.menu-toggle,.menu{display:block;cursor:pointer}.nav-links.is-open{display:flex}}
 
 /* Premium interaction layer — Alpine Agencies */
-:root{--forest:#103c31;--deep:#071a19;--lime:#d8f36a;--paper:#f5f7f1;--muted:#6c7c73;--line:#dce4dc}
+:root{--forest:#103c31;--deep:#071a19;--lime:#66d5f4;--paper:#f5f7f1;--muted:#6c7c73;--line:#dce4dc}
 html{scroll-behavior:smooth;scroll-padding-top:100px}body{overflow-x:hidden}a,button{ -webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:3px solid #a6d25c;outline-offset:3px}
 .skip-link{position:fixed;z-index:9999;top:-80px;left:16px;background:var(--lime);color:#09271f;padding:12px 16px;font-weight:800}.skip-link:focus{top:16px}
-.hero{isolation:isolate}.hero:before{transform-origin:center;will-change:transform}.hero:after{background:radial-gradient(circle at 78% 35%,#d8f36a32,transparent 25%),linear-gradient(0deg,#071b2ae8,transparent 55%);mix-blend-mode:screen;opacity:.8}.hero .hi{animation:alpineRise .85s .08s both}.hero .ey{display:inline-flex;align-items:center;gap:10px}.hero .ey:before{content:"";display:inline-block;width:28px;height:1px;background:var(--c);box-shadow:0 0 12px var(--c)}.hero h1{text-wrap:balance}.hero h1 span{text-shadow:0 0 35px #d8f36a22}
-.hero-orbit{position:absolute;z-index:0;right:5%;top:18%;width:min(34vw,390px);aspect-ratio:1;border:1px solid #d8f36a50;border-radius:50%;pointer-events:none;animation:alpineOrbit 28s linear infinite;box-shadow:0 0 0 35px #d8f36a08,0 0 0 70px #d8f36a06}.hero-orbit:before,.hero-orbit:after{content:"";position:absolute;border:1px solid #ffffff2c;border-radius:50%;inset:13%;transform:rotate(35deg) scaleX(.55)}.hero-orbit:after{inset:25%;transform:rotate(-35deg) scaleX(.6)}.hero-orbit i{position:absolute;top:12%;left:25%;width:9px;height:9px;border-radius:50%;background:var(--c);box-shadow:0 0 24px var(--c)}.hero-grid{position:absolute;z-index:0;inset:0;pointer-events:none;opacity:.11;background-image:linear-gradient(#fff2 1px,transparent 1px),linear-gradient(90deg,#fff2 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(90deg,#000,transparent 90%)}
+.hero{isolation:isolate}.hero:before{transform-origin:center;will-change:transform}.hero:after{background:radial-gradient(circle at 78% 35%,#66d5f432,transparent 25%),linear-gradient(0deg,#071b2ae8,transparent 55%);mix-blend-mode:screen;opacity:.8}.hero .hi{animation:alpineRise .85s .08s both}.hero .ey{display:inline-flex;align-items:center;gap:10px}.hero .ey:before{content:"";display:inline-block;width:28px;height:1px;background:var(--c);box-shadow:0 0 12px var(--c)}.hero h1{text-wrap:balance}.hero h1 span{text-shadow:0 0 35px #66d5f422}
+.hero-orbit{position:absolute;z-index:0;right:5%;top:18%;width:min(34vw,390px);aspect-ratio:1;border:1px solid #66d5f450;border-radius:50%;pointer-events:none;animation:alpineOrbit 28s linear infinite;box-shadow:0 0 0 35px #66d5f408,0 0 0 70px #66d5f406}.hero-orbit:before,.hero-orbit:after{content:"";position:absolute;border:1px solid #ffffff2c;border-radius:50%;inset:13%;transform:rotate(35deg) scaleX(.55)}.hero-orbit:after{inset:25%;transform:rotate(-35deg) scaleX(.6)}.hero-orbit i{position:absolute;top:12%;left:25%;width:9px;height:9px;border-radius:50%;background:var(--c);box-shadow:0 0 24px var(--c)}.hero-grid{position:absolute;z-index:0;inset:0;pointer-events:none;opacity:.11;background-image:linear-gradient(#fff2 1px,transparent 1px),linear-gradient(90deg,#fff2 1px,transparent 1px);background-size:70px 70px;mask-image:linear-gradient(90deg,#000,transparent 90%)}
 @keyframes alpineRise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}@keyframes alpineOrbit{to{transform:rotate(360deg)}}
 .card,.photo,.steps article{transition:transform .3s,border-color .3s,box-shadow .3s}.card{position:relative;overflow:hidden}.card:after{content:"";position:absolute;left:0;bottom:0;width:0;height:3px;background:var(--c);transition:width .3s}.card:hover:after{width:100%}.card:hover{border-color:#a7c96c}.card .num{display:inline-flex;align-items:center;gap:8px}.card .num:after{content:"↗";font-size:14px;opacity:.75}
 .card-feature{display:flex;align-items:center;justify-content:space-between;gap:16px}.card-icon{width:46px;height:46px;display:grid;place-items:center;background:#e8f0e3;color:#27533d;font-size:22px;margin-bottom:18px}.service-detail{display:grid;grid-template-columns:1fr .7fr;gap:40px;align-items:start}.detail-panel{background:#e8eee4;padding:25px;border-left:3px solid var(--b)}.detail-panel h3{margin-top:0}.detail-panel a{font-weight:800;color:var(--b)}
@@ -72,3 +72,18 @@ html{scroll-behavior:smooth;scroll-padding-top:100px}body{overflow-x:hidden}a,bu
 @media(max-width:850px){.hero-orbit{right:-10%;width:42vw;opacity:.55}.utility-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.form-layout,.checklist-layout,.service-detail{grid-template-columns:1fr}.checklist-summary{position:static}}
 @media(max-width:560px){.hero-orbit{display:none}.utility-grid,.field-grid{grid-template-columns:1fr}.search-inner{padding:17px}.hero .hi{animation:none}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;scroll-behavior:auto!important;transition:none!important}.reveal{opacity:1;transform:none}}
+
+/* Restore Alpine's original blue/cyan identity while keeping the new premium layout */
+:root{--aa-navy:#071b2a;--aa-panel:#0b2635;--aa-lime:#66d5f4;--aa-teal:#1687bd}
+body{background-color:#071b2a}
+.hero:before,.pagehero:before,.page-hero:before{background-image:linear-gradient(90deg,#061927f5 0%,#061927d9 47%,#06192740 100%),linear-gradient(0deg,#071b2ac9,transparent 48%),url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=2400&q=90')!important;background-size:cover!important;background-position:center!important}
+.hero:after,.pagehero:after,.page-hero:after{background:radial-gradient(ellipse at 78% 36%,#66d5f435,transparent 28%),linear-gradient(180deg,transparent 45%,#071b2a80)!important}
+.hero-orbit{border-color:#66d5f466!important;box-shadow:0 0 0 36px #66d5f40b,0 0 0 72px #66d5f408,0 0 50px #66d5f40b}
+.hero-orbit:before,.hero-orbit:after{border-color:#ffffff32}
+.hero-orbit span{background:#66d5f4!important;box-shadow:0 0 22px #66d5f4!important}
+.hero-orbit b,.hero h1 em,.hero h1 span,.page-hero h1 em,.page-hero h1 span{color:#66d5f4!important}
+.btn-primary,.btn,.cta,.button{--lime:#66d5f4}
+a:hover,.navlinks a:hover{color:#66d5f4}
+.utility-card:hover,.card:hover{border-color:#1687bd}
+.skip-link{background:#66d5f4}
+@media(prefers-reduced-motion:reduce){.hero:before,.hero-orbit{animation:none!important}}
