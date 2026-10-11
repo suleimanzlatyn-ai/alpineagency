@@ -5,7 +5,7 @@
 :root{--night:#06161b;--night2:#0b2729;--forest:#164b38;--green:#2b7653;--mint:#9dc8a5;--lime:#d5f078;--paper:#f5f7f1;--shadow:0 26px 70px #071f1a20}
 ::selection{background:var(--lime);color:var(--night)}
 .hero{min-height:min(790px,calc(100svh - 112px));}
-.hero:before{background-image:linear-gradient(90deg,#031613f5 0%,#061b18dc 42%,#061b1850 100%),var(--hero-image);background-size:cover;background-position:center;filter:saturate(.9);animation:alpineCinematic 1.4s cubic-bezier(.2,.7,.2,1) both}
+.hero:before{background-image:linear-gradient(90deg,#031613f5 0%,#061b18dc 42%,#061b1850 100%),var(--hero-image,url('https://images.unsplash.com/photo-1516937941344-00b4e0337589?auto=format&fit=crop&w=2200&q=85'));background-size:cover;background-position:center;filter:saturate(.9);animation:alpineCinematic 1.4s cubic-bezier(.2,.7,.2,1) both}
 .hero:after{background:radial-gradient(ellipse at 78% 40%,#d5f07835,transparent 31%),linear-gradient(0deg,#04130fc4,transparent 46%)}
 .hero-grid{position:absolute;inset:0;z-index:0;opacity:.14;pointer-events:none;background-image:linear-gradient(#ffffff18 1px,transparent 1px),linear-gradient(90deg,#ffffff18 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(90deg,#000,transparent 95%)}
 .hero-content{z-index:2}
@@ -22,7 +22,7 @@
 .feature-card:hover img,.sector-card:hover img{filter:saturate(1.05)}
 .split-image{box-shadow:var(--shadow)}
 .page-hero{background:#061a20}
-.page-hero:before{background-image:linear-gradient(90deg,#061a20ef 0%,#061a20c8 58%,#061a2070 100%),var(--page-image,var(--hero-image));background-position:center;background-size:cover;animation:alpineCinematic 1.1s ease-out both}
+.page-hero:before{background-image:linear-gradient(90deg,#061a20ef 0%,#061a20c8 58%,#061a2070 100%),var(--page-image,var(--hero-image,url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=85')));background-position:center;background-size:cover;animation:alpineCinematic 1.1s ease-out both}
 .page-hero:after{content:"";position:absolute;z-index:-1;right:-120px;top:-240px;width:500px;height:500px;border:1px solid #d5f07836;border-radius:50%;box-shadow:0 0 0 42px #d5f0780b,0 0 0 84px #d5f07807;pointer-events:none}
 .banner{background:var(--lime);color:#12271c;padding:60px 0;position:relative;overflow:hidden}
 .banner:after{content:"";position:absolute;right:-150px;top:-270px;width:500px;height:500px;border:1px solid #153b2e30;border-radius:50%;box-shadow:0 0 0 42px #153b2e08,0 0 0 84px #153b2e06;pointer-events:none}
