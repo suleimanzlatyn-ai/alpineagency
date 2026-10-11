@@ -3,6 +3,8 @@
   <url><loc>https://alpine-agencies-nine.vercel.app/</loc><changefreq>monthly</changefreq><priority>1.0</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/services.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://alpine-agencies-nine.vercel.app/service-finder.html</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://alpine-agencies-nine.vercel.app/case-studies.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/environmental-services.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/environmental-consultancy.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/strategy-consultancy.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -21,7 +23,9 @@
   <url><loc>https://alpine-agencies-nine.vercel.app/incident-response.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/environmental-response.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/emergency.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://alpine-agencies-nine.vercel.app/response.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/climate-resilience.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://alpine-agencies-nine.vercel.app/climate-resilience-guide.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/contaminated-land.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/remediation.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/health-safety.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
@@ -44,11 +48,4 @@
   <url><loc>https://alpine-agencies-nine.vercel.app/faqs.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/faq.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/privacy.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://alpine-agencies-nine.vercel.app/incident-readiness-guide.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://alpine-agencies-nine.vercel.app/water-drainage-guide.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://alpine-agencies-nine.vercel.app/climate-resilience-guide.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://alpine-agencies-nine.vercel.app/compliance-reporting.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://alpine-agencies-nine.vercel.app/case-studies.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://alpine-agencies-nine.vercel.app/service-finder.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
-  <url><loc>https://alpine-agencies-nine.vercel.app/response.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
