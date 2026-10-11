@@ -50,4 +50,5 @@
   <url><loc>https://alpine-agencies-nine.vercel.app/compliance-reporting.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/case-studies.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://alpine-agencies-nine.vercel.app/service-finder.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://alpine-agencies-nine.vercel.app/response.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
 </urlset>
