@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" role="img" aria-labelledby="title">
+<title id="title">Alpine Agencies mountain A mark</title>
+<defs>
+ <linearGradient id="metal" x1="16" y1="15" x2="83" y2="85" gradientUnits="userSpaceOnUse"><stop stop-color="#fff"/><stop offset=".38" stop-color="#cdefff"/><stop offset=".72" stop-color="#4ab8ff"/><stop offset="1" stop-color="#edfaff"/></linearGradient>
+ <linearGradient id="blue" x1="12" y1="70" x2="88" y2="35" gradientUnits="userSpaceOnUse"><stop stop-color="#1478e8"/><stop offset=".52" stop-color="#29d5ff"/><stop offset="1" stop-color="#8cecff"/></linearGradient>
+ <filter id="glow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="2.4" result="blur"/><feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<circle cx="50" cy="50" r="43" fill="#071b2d" fill-opacity=".18" stroke="#36bfff" stroke-opacity=".32" stroke-width="1.2"/>
+<circle class="orbit" cx="50" cy="50" r="43" fill="none" stroke="url(#blue)" stroke-width="1.7" stroke-dasharray="2 8" stroke-linecap="round"/>
+<path d="M16 76 42 25Q45 19 49 25L83 76H66L47 44 32 76Z" fill="url(#metal)" stroke="#e4f8ff" stroke-width=".7" stroke-linejoin="round"/>
+<path d="m28 76 19-22 7 10 5-6 12 18H28Z" fill="#071b2d" stroke="url(#blue)" stroke-width="2.5" stroke-linejoin="round"/>
+<path class="swoosh" d="M10 57C27 31 68 28 88 43 100 52 80 69 56 69 35 69 18 62 10 57Z" fill="none" stroke="url(#blue)" stroke-width="4.5" stroke-linecap="round" filter="url(#glow)"/>
+<circle class="pulse" cx="84" cy="27" r="4" fill="#b5f5ff" filter="url(#glow)"/>
+<style>
+.orbit{transform-origin:50px 50px;animation:orbit 22s linear infinite}
+.swoosh{stroke-dasharray:180;stroke-dashoffset:180;animation:draw 1.4s .25s ease-out forwards,shine 3.4s 1.8s ease-in-out infinite}
+.pulse{transform-origin:84px 27px;animation:pulse 2.2s ease-in-out infinite}
+@keyframes orbit{to{transform:rotate(360deg)}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes shine{0%,100%{opacity:.75}50%{opacity:1}}
+@keyframes pulse{0%,100%{opacity:.5;transform:scale(.8)}50%{opacity:1;transform:scale(1.25)}}
+@media(prefers-reduced-motion:reduce){.orbit,.swoosh,.pulse{animation:none;stroke-dashoffset:0}}
+</style></svg>
