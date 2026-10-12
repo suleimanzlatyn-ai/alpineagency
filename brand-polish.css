@@ -687,3 +687,31 @@ input:focus,select:focus,textarea:focus{border-color:#4d9bc3!important;box-shado
 .alpine-image-tile{background:#102f43;border-color:#d8e5ed}.alpine-image-tile:after{background:linear-gradient(0deg,#071b2ae8,transparent 65%)}.alpine-image-tile figcaption span{color:#a8dff4}
 .brand-mark circle{stroke:#2877a6}.brand-mark path{stroke:#164c70}.brand-mark path:last-child{stroke:#a8dff4}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}}
+
+/* OCT 2026 identity refresh — electric blue / midnight navy */
+:root{--ink:#eaf4fc;--forest:#167bd8;--deep:#061426;--lime:#52d7ff;--paper:#f4f8fc;--muted:#63758a;--line:#dbe5ef;--shadow:0 24px 70px #03112622}
+body{background:#f4f8fc;color:#12283d}
+.topline,.site-header{background:#061426!important;color:#edf7ff!important;border-color:#1d3c5b!important}
+.topline{color:#b9d7f2!important}.navlinks{color:#d7e8f7!important}.navlinks>a,.navdrop>button{color:#d7e8f7!important}.navlinks>a:hover,.navdrop>button:hover,.navlinks>a.active{color:#5bd8ff!important}
+.brand{gap:12px!important}.brand-mark{width:52px!important;height:52px!important;filter:drop-shadow(0 0 10px #1ca9ff35);flex:none}
+.brand-copy,.brand-name{color:#f4faff!important;font:800 14px/1.05 Manrope,sans-serif!important;letter-spacing:.08em!important}
+.brand-copy small,.brand-name small,.brand-sub{color:#59cfff!important;letter-spacing:.17em!important;font-size:8px!important}
+.button,.nav-cta,.button.primary{background:linear-gradient(135deg,#35baff,#1677e7)!important;color:#031729!important;border:1px solid #80e0ff!important;box-shadow:0 8px 24px #0785d52a;transition:transform .25s,box-shadow .25s}
+.button:hover,.nav-cta:hover,.button.primary:hover{transform:translateY(-2px);box-shadow:0 14px 32px #0785d550}
+.hero,.page-hero,.hero-inner{background-color:#061426!important;color:#f4faff!important}
+.hero:before,.page-hero:before,.hero-inner:before{background-image:linear-gradient(90deg,#041020f5 0%,#06182ce0 46%,#07294b72 100%),var(--hero-image,url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2200&q=90'))!important;background-position:center!important;background-size:cover!important}
+.hero:after,.page-hero:after,.hero-inner:after{border-color:#32baff45!important;box-shadow:0 0 0 55px #27a8ff0b,0 0 0 110px #27a8ff07!important}
+.hero h1 em,.page-hero h1 em,.hero-inner h1 em{color:#5bd8ff!important}
+.eyebrow,.hero-meta span:before{color:#5bd8ff!important}
+.navlinks>a:after,.navdrop>button:after{background:#43c9ff!important}
+.dropmenu{background:#071a2c!important;border-color:#21405e!important;color:#eaf4fc!important}.dropmenu a:hover{background:#102b46!important;color:#5bd8ff!important}
+.section.dark{background:#071a2c!important}.section.mist{background:#e8f1f8!important}.section.white{background:#fff!important}
+.section-head .eyebrow,.prose .eyebrow{color:#147bd1!important}.section.dark .section-head .eyebrow{color:#5bd8ff!important}
+.card,.service-card,.project-card,.utility-card{border-color:#dbe5ef!important}.card:hover,.service-card:hover,.project-card:hover,.utility-card:hover{border-color:#6dcfff!important}
+.site-footer,footer{--ink:#eaf4fc;background:#041020!important;color:#d4e5f5!important}
+.site-footer a,footer a{color:#c6e2fa}.site-footer a:hover,footer a:hover{color:#5bd8ff}
+.form-panel,.faq-entry,.utility-card{background:#fff}
+input:focus,select:focus,textarea:focus{border-color:#1989dc!important;box-shadow:0 0 0 3px #1989dc1b!important}
+@keyframes alpineBluePulse{0%,100%{filter:drop-shadow(0 0 3px #1ba9ff22)}50%{filter:drop-shadow(0 0 12px #1ba9ff88)}}
+.brand:hover .brand-mark{animation:alpineBluePulse 1.5s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.brand:hover .brand-mark{animation:none}}
