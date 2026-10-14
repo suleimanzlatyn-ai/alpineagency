@@ -35,3 +35,41 @@
 .brand:hover img{transform:translateY(-2px) scale(1.04)!important;filter:drop-shadow(0 0 10px rgba(55,190,225,.45))!important}
 .brand:focus-visible{outline:2px solid #73983a;outline-offset:6px;border-radius:3px}
 @media(prefers-reduced-motion:reduce){.brand,.brand img,.brand-copy,.brand-copy small,.brand:before,.brand:after{animation:none!important;opacity:1!important;clip-path:none!important;filter:none!important;transform:none!important}}
+
+
+/* Slower cinematic logo cycle: a gentle reveal, a 3.5-second hold, then repeat */
+.brand img{animation:alpineCinematicIcon 10s cubic-bezier(.18,.72,.22,1) infinite!important}
+.brand:before{animation:alpineCinematicGlow 10s ease-in-out infinite!important}
+.brand:after{animation:alpineCinematicSweep 10s ease-in-out infinite!important}
+.brand-copy{animation:alpineCinematicName 10s cubic-bezier(.18,.72,.22,1) infinite!important}
+.brand-copy small{animation:alpineCinematicSub 10s ease-in-out infinite!important}
+@keyframes alpineCinematicName{
+  0%,5%{opacity:0;clip-path:inset(0 100% 0 0);transform:translateX(-18px);letter-spacing:.28em}
+  32%{opacity:1;clip-path:inset(0 0 0 0);transform:translateX(0);letter-spacing:.07em}
+  38%{transform:scale(1.035) translateY(-2px)}
+  43%{transform:scale(1) translateY(0)}
+  43%,78%{opacity:1;clip-path:inset(0 0 0 0);transform:scale(1) translateY(0)}
+  88%,100%{opacity:0;clip-path:inset(0 100% 0 0);transform:translateX(7px)}
+}
+@keyframes alpineCinematicSub{
+  0%,30%{opacity:0;filter:blur(5px);transform:translateY(6px)}
+  40%,78%{opacity:1;filter:blur(0);transform:translateY(0)}
+  88%,100%{opacity:0;filter:blur(4px);transform:translateY(-3px)}
+}
+@keyframes alpineCinematicIcon{
+  0%,8%{opacity:0;transform:translateX(-24px) rotate(-20deg) scale(.62);filter:drop-shadow(0 0 0 rgba(55,190,225,0))}
+  34%{opacity:1;transform:translateX(3px) rotate(4deg) scale(1.08);filter:drop-shadow(0 0 12px rgba(55,190,225,.55))}
+  41%{transform:translateX(0) rotate(0) scale(1)}
+  43%,78%{transform:none;opacity:1;filter:drop-shadow(0 0 5px rgba(55,190,225,.22))}
+  88%,100%{opacity:0;transform:translateX(15px) rotate(12deg) scale(.82);filter:drop-shadow(0 0 0 rgba(55,190,225,0))}
+}
+@keyframes alpineCinematicGlow{
+  0%,10%,80%,100%{opacity:0;transform:translateY(-50%) scale(.8) rotate(0deg)}
+  38%{opacity:.8;transform:translateY(-50%) scale(1.12) rotate(110deg)}
+  52%{opacity:.25;transform:translateY(-50%) scale(1) rotate(220deg)}
+}
+@keyframes alpineCinematicSweep{
+  0%,31%{opacity:0;left:-16px}
+  43%{opacity:.9;left:52px}
+  52%,100%{opacity:0;left:72px}
+}
