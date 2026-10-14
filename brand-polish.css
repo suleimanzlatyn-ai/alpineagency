@@ -18,3 +18,20 @@
 @keyframes alpineWordReveal{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:translateX(0)}}
 @keyframes alpineLogoGleam{0%{transform:translateX(-180%) skewX(-18deg);opacity:0}18%{opacity:.8}100%{transform:translateX(420%) skewX(-18deg);opacity:0}}
 @media (prefers-reduced-motion:reduce){.brand,.brand img,.brand-copy,.brand-copy small,.brand:after{animation:none!important;transition:none!important}.brand:hover img{transform:none}}
+
+
+/* Cinematic brand reveal inspired by the ScanScope logo treatment */
+.brand{animation:none!important;position:relative;isolation:isolate}
+.brand img{position:relative;z-index:1;animation:alpineCinematicIcon 5.8s cubic-bezier(.2,.75,.2,1) infinite!important;filter:drop-shadow(0 0 0 rgba(55,190,225,0));transition:filter .3s ease,transform .3s ease}
+.brand:before{content:"";position:absolute;z-index:0;left:-7px;top:50%;width:58px;height:58px;border-radius:18px;transform:translateY(-50%) scale(.8) rotate(0deg);background:conic-gradient(from 0deg,transparent 0 35%,rgba(72,190,225,.9) 45%,transparent 55% 100%);filter:blur(8px);opacity:0;pointer-events:none;animation:alpineCinematicGlow 5.8s ease-in-out infinite}
+.brand:after{content:"";position:absolute;z-index:3;pointer-events:none;top:calc(50% - 27px);left:-16px;width:4px;height:58px;transform:rotate(35deg);background:linear-gradient(transparent,#effcff,transparent);filter:blur(1px);opacity:0;animation:alpineCinematicSweep 5.8s ease-in-out infinite}
+.brand-copy{animation:alpineCinematicName 5.8s cubic-bezier(.2,.8,.2,1) infinite!important;transform-origin:left center}
+.brand-copy small{animation:alpineCinematicSub 5.8s ease-in-out infinite!important}
+@keyframes alpineCinematicName{0%,7%{opacity:0;clip-path:inset(0 100% 0 0);transform:translateX(-18px);letter-spacing:.28em}25%{opacity:1;clip-path:inset(0 0 0 0);transform:translateX(0);letter-spacing:.07em}36%{transform:scale(1.045) translateY(-3px)}43%{transform:scale(.99) translateY(1px)}50%,74%{transform:scale(1) translateY(0);opacity:1}82%,100%{opacity:0;clip-path:inset(0 100% 0 0);transform:translateX(7px)}}
+@keyframes alpineCinematicSub{0%,25%{opacity:0;filter:blur(5px);transform:translateY(6px)}38%,74%{opacity:1;filter:blur(0);transform:translateY(0)}82%,100%{opacity:0;filter:blur(4px);transform:translateY(-3px)}}
+@keyframes alpineCinematicIcon{0%,26%{opacity:0;transform:translateX(-24px) rotate(-20deg) scale(.62);filter:drop-shadow(0 0 0 rgba(55,190,225,0))}39%{opacity:1;transform:translateX(3px) rotate(4deg) scale(1.1);filter:drop-shadow(0 0 12px rgba(55,190,225,.65))}47%{transform:translateX(-1px) rotate(-1deg) scale(.99)}54%,74%{transform:none;opacity:1;filter:drop-shadow(0 0 5px rgba(55,190,225,.22))}84%,100%{opacity:0;transform:translateX(15px) rotate(12deg) scale(.82);filter:drop-shadow(0 0 0 rgba(55,190,225,0))}}
+@keyframes alpineCinematicGlow{0%,28%,75%,100%{opacity:0;transform:translateY(-50%) scale(.8) rotate(0deg)}42%{opacity:.9;transform:translateY(-50%) scale(1.15) rotate(110deg)}58%{opacity:.3;transform:translateY(-50%) scale(1) rotate(220deg)}}
+@keyframes alpineCinematicSweep{0%,37%{opacity:0;left:-16px}48%{opacity:.95;left:52px}57%,100%{opacity:0;left:72px}}
+.brand:hover img{transform:translateY(-2px) scale(1.04)!important;filter:drop-shadow(0 0 10px rgba(55,190,225,.45))!important}
+.brand:focus-visible{outline:2px solid #73983a;outline-offset:6px;border-radius:3px}
+@media(prefers-reduced-motion:reduce){.brand,.brand img,.brand-copy,.brand-copy small,.brand:before,.brand:after{animation:none!important;opacity:1!important;clip-path:none!important;filter:none!important;transform:none!important}}
